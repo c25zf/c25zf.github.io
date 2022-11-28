@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<style type="text/css">
+	
+#box{ height: 100px; 
+width: 100px;
+background-color: purple;
+position: absolute;
+}
+
+
+
+	#modelo{width: 100px;
+			height: 100px;
+			left:  98%;}
+
+
+
+
+#whatever{
+	position: relative;
+	left: 90%;
+	height: 300 px;
+
+
+</style>
+
+
+</head>
+<body>
+
+
+<div id="box"> </div> 
+
+<script type="text/javascript">
+	
+document.addEventListener("click", function(event){
+box.style.left= event.clientX -50 +"px"
+box.style.top= event.clientY -50 +"px"
+
+
+
+
+
+})
+
+
+
+</script>
+
+<div id="whatever">
+<a id="modelo" href="Projects.html"> 
+Back to projects
+</a>
+
+</div>
+
+</body>
+</html>
