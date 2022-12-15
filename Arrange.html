@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        
+        h1{
+            font-family:;
+            font-size:;
+            color:;
+        }
+
+        p{
+            font-family: courier;
+            font-size:;
+            color:;
+        }
+
+
+    </style>
+</head>
+<body>
+    <a id="ontherocks" href="Projects.html"> Back to menu </a>
+<h1> <!-- If you'd like a title, erase this text and feel free to put your title here! In the style section, in the curly brackets called "h1," put in the font style and font size you want --> <h1>
+
+<br><br>
+
+<p> <!-- If you'd like a description, feel free to put in your description here! Add your styling above in the curly brackets after "p" above --> To see the code for this page, right click and choose "view page source" <p>
+
+
+<script type="text/javascript">
+
+//For all of your media, to use this, label each file  with numbers (eg.1.jpg, 2.jpg) and keep them in the same folder as this html file. If they are not jpgs, change the extension "jpg" in the recipe below (line 25) to whatever file type they are.  
+
+//Below is the recipe to make the squares appear on the page//
+    
+    function makeSquare (x) {
+
+            var square = document.createElement('div');
+                        document.body.appendChild(square);
+            square.style.width = "100px";
+            square.style.height = "100px";
+            square.style.display = "inline-block";
+            square.style.margin = "10px";
+            square.style.backgroundRepeat = "no-repeat";
+            square.style.border = "1px";
+            square.style.backgroundColor = "purple";
+
+            square.style.backgroundImage = "url(" + x + ".jpg)";
+
+            square.style.backgroundSize = "contain";
+            square.id = "square" + x;
+
+            if(i%2 ==1){ square.style.backgroundColor = "lightblue"
+
+
+
+}
+
+if(i%2 ==0){ square.style.backgroundColor = "pink"
+    
+square.style.backgroundRepeat = "no-repeat"
+
+
+}
+
+};
+
+
+var counter= 0
+    
+document.addEventListener("div", function (){
+
+counter = counter+1;
+
+console.log(counter)
+
+if(x%2 ==1){ square.style.backgroundColor = "red"
+
+
+
+}
+
+if(x%2 ==0){ square.style.backgroundColor = "pink"
+    mj.style.backgroundSize = "fill"
+mj.style.backgroundRepeat = "no-repeat"
+
+
+}
+
+})
+
+
+
+
+    for (var i = 0; i < 18; i++) 
+    { makeSquare(i);}
+</script>
+</body>
+</html>
