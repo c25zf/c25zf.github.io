@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style type="text/css">
+	#body{ background-color: darkseagreen; }
+	#button{width: 30px;
+		height: 30px;
+		background-color: darkblue;}
+
+	#box1{ width: 100px;
+		height: 100px;
+		border: 1px solid blue;
+		color: black ;
+
+font-family: "Spectral";
+text-decoration: none;
+
+}
+#box2{ width: 100px;
+		height: 100px;
+		border: 1px solid blue;
+	color: black ;
+
+font-family: "Spectral";
+text-decoration: none;
+}
+
+</style>
+
+</head>
+<body id="body">
+	<div id="button"></div>
+
+<div id="box1"></div>
+<div id="box2"></div>
+
+<script type="text/javascript"> 
+
+var terms = ["jugar yo", "jugar tú", "jugar el/ella", "jugar nos", "jugar ellos/ellas"]
+
+var answers = ["jugué", "jugaste", "jugó", "jugamos", "jugaron"]
+
+button.addEventListener("click", function(){
+var number = Math.round(Math.random()*4)
+
+
+box1.innerText =terms[number]
+
+function wait ()
+{box2.innerText =answers[number]}
+
+setTimeout(wait, 5000)
+
+})
+
+
+</script>
+
+
+</body>
+</html>

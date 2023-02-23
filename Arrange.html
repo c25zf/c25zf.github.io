@@ -3,29 +3,52 @@
 <html>
 <head>
     <style>
+        #body{background-color: black;}
+
+        #button{height: 25px;
+            width: 25px;
+            background-color: white;}
+            #nums{height: 25px;
+                width: 25px;
+                color: white;
+
+
+            }
+
+
         
         h1{
             font-family:;
             font-size:;
-            color:;
+            color: white;
         }
 
         p{
             font-family: courier;
             font-size:;
-            color:;
+            color: white;
         }
 
+/*        background-color:rgb(204, 234, 232)
+*/
 
     </style>
 </head>
-<body>
+<body id= "body">
+
+
+    <center>
+<div id="button"> </div>
+<div id="nums"> clicks  </div>
+</center>
+
+
     <a id="ontherocks" href="Projects.html"> Back to menu </a>
 <h1> <!-- If you'd like a title, erase this text and feel free to put your title here! In the style section, in the curly brackets called "h1," put in the font style and font size you want --> <h1>
 
 <br><br>
 
-<p> <!-- If you'd like a description, feel free to put in your description here! Add your styling above in the curly brackets after "p" above --> To see the code for this page, right click and choose "view page source" <p>
+<p> <!-- If you'd like a description, feel free to put in your description here! Add your styling above in the curly brackets after "p" above --> Click button for new colors <p>
 
 
 <script type="text/javascript">
@@ -44,57 +67,88 @@
             square.style.margin = "10px";
             square.style.backgroundRepeat = "no-repeat";
             square.style.border = "1px";
-            square.style.backgroundColor = "purple";
+            square.style.backgroundColor = "#e5bff5";
 
             square.style.backgroundImage = "url(" + x + ".jpg)";
 
             square.style.backgroundSize = "contain";
             square.id = "square" + x;
 
-            if(i%2 ==1){ square.style.backgroundColor = "lightblue"
+            
+var breakfast = ["rgb(160, 242, 233)","rgb(168, 247, 176)", "#f0f2b8","#e5bff5","#f5a6c3" ]
 
+var counter = 0
 
+button.addEventListener("click", function(){
+var random = Math.round(Math.random()*5)
+//console.log(random)
+square.style.opacity = "100";
+        
+         square.style.backgroundColor = breakfast[random];
 
-}
+        if(square.style.backgroundColor == "rgb(160, 242, 233)"){ 
+            square.addEventListener("click", function(){square.style.opacity = "0";})
 
-if(i%2 ==0){ square.style.backgroundColor = "pink"
-    
-square.style.backgroundRepeat = "no-repeat"
+        }
 
+           
 
-}
-
-};
-
-
-var counter= 0
-    
-document.addEventListener("div", function (){
-
-counter = counter+1;
+counter=counter+1;
 
 console.log(counter)
-
-if(x%2 ==1){ square.style.backgroundColor = "red"
-
-
-
-}
-
-if(x%2 ==0){ square.style.backgroundColor = "pink"
-    mj.style.backgroundSize = "fill"
-mj.style.backgroundRepeat = "no-repeat"
-
-
-}
+nums.innerText = counter;
 
 })
 
 
 
+      square.addEventListener ("click", function(){
+        //console.log(this.style.backgroundColor)
+      })
 
-    for (var i = 0; i < 18; i++) 
+         
+            //square.style.backgroundColor = "rgb("+Math.round(Math.random()*255) + "," + Math.round(Math.random()*255) + "," + Math.round(Math.random()*255)  +")"
+
+
+
+
+
+
+}; //end of function//
+
+
+// var counter= 0
+    
+// document.addEventListener("div", function (){
+
+// counter = counter+1;
+
+// console.log(counter)
+
+// if(x%2 ==1){ 
+
+//     // square.style.backgroundColor = "red"
+
+// square.style.backgroundColor = "rgb("+Math.round(Math.random()*255) + "," + Math.round(Math.random()*255) + "," + Math.round(Math.random()*255)  +")"
+
+
+// }
+
+// if(x%2 ==0){ square.style.backgroundColor = "pink"
+//     mj.style.backgroundSize = "fill"
+// mj.style.backgroundRepeat = "no-repeat"
+
+
+// }
+
+// })
+
+
+
+
+    for (var i = 0; i < 55; i++) 
     { makeSquare(i);}
 </script>
+
 </body>
 </html>

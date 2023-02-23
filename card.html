@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style type="text/css">
+	
+#body{background-color: hotpink;
+background-repeat: no-repeat;
+background-size: cover; }
+#title{color: darkred;
+height: 500;
+width: 500;
+font-family: "Spectral";
+text-decoration: none;
+font-size: xx-large;
+}
+#button{ height: 500;
+	width: 500;
+	font-family: "Spectral";
+text-decoration: none;
+color black
+background-color: red;
+}
+#one{height: 300px;
+width: 300px; 
+font-family: "Spectral";
+text-decoration: none;
+color: black;
+opacity: 0;}
+
+#two{height: 300px;
+width: 300px; 
+font-family: "Spectral";
+text-decoration: none;
+color: black;
+opacity: 0;}
+
+</style>
+
+
+
+</head>
+<body id = "body">
+
+<center>
+	<div id = "title">
+		Happy Valentine's Day
+	</div>
+
+</center>
+<div id= "button"> click to see things you've said in the past week </div>
+
+
+<div id= "one"> "" </div>
+<div id= "two"> "" </div>
+<script type="text/javascript">
+	
+var counter = 0
+
+//function wait ()
+//{body.style.backgroundImage = 'url(file:///Users/student/Desktop/c25zf.github.io/Agony_Rock.png)'}
+
+//setTimeout(wait, 10000)
+
+button.addEventListener ("click", function(){
+	counter=counter +1
+	console.log(counter)
+	if(counter ==1){one.style.opacity="100"}
+if(counter ==2){two.style.opacity="100"}
+})
+
+
+
+</script>
+
+</body>
+</html>
