@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<style type="text/css">
+	#body{ background-color: whitesmoke; }
+	#button{width: 30px;
+		height: 30px;
+		background-color: darkblue;}
+
+	#box1{ width: 100px;
+		height: 100px;
+		border: 1px solid blue;
+		color: black ;
+
+font-family: "Spectral";
+text-decoration: none;
+
+}
+#box2{ width: 100px;
+		height: 100px;
+		border: 1px solid blue;
+		color: black ;
+
+font-family: "Spectral";
+text-decoration: none;
+
+}
+
+
+
+</style>
+
+</head>
+<body id="body">
+
+	Directions: 
+	type your choice in the box then click the button
+
+
+
+
+	
+	<input id="input"></input>
+
+	<div id="button"></div>
+
+<div id="box1">Computers pick
+</div>
+
+<div id="box2">Your pick</div>
+
+
+<script type="text/javascript"> 
+
+var terms = ["rock", "paper", "scissors"]
+
+
+button.addEventListener("click", function(){
+var number = Math.round(Math.random()*2)
+var pick1 = input.value;
+
+box1.innerText =terms[number]
+box2.innerText = pick1;
+
+if (number==0 && pick1=="rock") {alert(
+	"It's a tie!")}
+if (number==0 && pick1=="scissors") {alert(
+	"You Lose!! Yay")}
+	if (number==0 && pick1=="paper") {alert(
+	"you win")}
+		if (number==1 && pick1=="rock") {alert(
+	"You Lose!! Yay")}
+			if (number==1 && pick1=="paper") {alert(
+	"It's a tie!")}
+				if (number==1 && pick1=="scissors") {alert(
+	"you win")}
+	if (number==2 && pick1=="rock") {alert(
+	"you win")}
+			if (number==2 && pick1=="paper") {alert(
+	"You Lose!! Yay!")}
+				if (number==2 && pick1=="scissors") {alert(
+	"It's a tie!")}
+})
+
+
+</script>
+
+
+</body>
+</html>

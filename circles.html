@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">
+        
+.bug{
+    width:10px;
+    height: 10px;
+    background-color: blueviolet;
+    position: absolute;
+
+}
+
+    </style>
+</head>
+<body>
+<script type="text/javascript">
+document.addEventListener(
+    "mousemove", 
+        function make (event){
+    var sq = document.createElement("div");
+    document.body.appendChild(sq);
+    sq.classList.add('bug')
+
+    function move () {
+
+        sq.style.left = Math.random()*10 + event.clientX +"px";}
+
+
+    function mueve () {sq.style.top = Math.random()*10 + event.clientY + "px";}
+
+    setInterval(move,100)
+    setInterval(mueve,100)
+
+
+var r = Math.round(Math.random()*255)
+var g = Math.round(Math.random()*255)
+var b = Math.round(Math.random()*180)
+function change () {
+
+sq.style.backgroundColor = "rgb("+30 +","+100+","+b +")"
+console.log(event.clientX, event.clientY)
+
+}
+console.log(b)
+    setInterval (change,100)
+}
+
+
+
+// for(var i = 0; i <100; i=i+1){make()}
+    
+)
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
