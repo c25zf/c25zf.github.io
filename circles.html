@@ -35,6 +35,8 @@ document.addEventListener(
     setInterval(move,100)
     setInterval(mueve,100)
 
+var w = Math.round(Math.random()*100)
+var h = Math.round(Math.random()*100)
 
 var r = Math.round(Math.random()*255)
 var g = Math.round(Math.random()*255)
@@ -42,6 +44,8 @@ var b = Math.round(Math.random()*180)
 function change () {
 
 sq.style.backgroundColor = "rgb("+30 +","+100+","+b +")"
+sq.style.height = "h+px"
+sq.style.width = "w+px"
 console.log(event.clientX, event.clientY)
 
 }

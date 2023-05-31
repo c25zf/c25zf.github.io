@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style> 
+		#button{height: 25px;
+            width: 25px;
+            background-color: #064a0f;
+        position: relative;
+    display: inline-block;}
+            #botton{height: 25px;
+            width: 25px;
+            background-color: #064a0f;
+        position: relative;
+    display: inline-block;}
+     #beammeup{height: 25px;
+            width: 25px;
+            background-color: #064a0f;
+        position: relative;
+    display: inline-block;}
+            #rob{height: 25px;
+            width: 25px;
+            background-color: #064a0f;
+        position: relative;
+    display: inline-block;}
+     #bob{height: 25px;
+            width: 25px;
+            background-color: #064a0f;
+        position: relative;
+    display: inline-block;}
+            #nums{height: 25px;
+            width: 25px;
+        position: relative;
+    display: inline-block;
+color: white;}
+     #cost{height: 25px;
+            width: 25px;
+        position: relative;
+    display: inline-block;
+color: white;}
+            #freeze{height: 25px;
+            width: 25px;
+            color: white;
+        position: relative;
+    display: inline-block;}
+            #numb{height: 25px;
+            width: 25px;
+            color: white;
+            position: relative;
+    display: inline-block;}
+     #pop{height: 25px;
+            width: 25px;
+            color: white;
+            position: relative;
+    display: inline-block;}
+     #reduce{height: 25px;
+            width: 25px;
+            position: relative;
+    display: inline-block;
+background-color: #870e05}
+#redux{height: 25px;
+            width: 25px;
+            position: relative;
+    display: inline-block;
+background-color: #870e05}
+#red{height: 25px;
+            width: 25px;
+            position: relative;
+    display: inline-block;
+background-color: #870e05}
+#debt{height: 25px;
+            width: 25px;
+            position: relative;
+    display: inline-block;
+background-color: #870e05}
+#nope{height: 25px;
+            width: 25px;
+            position: relative;
+    display: inline-block;
+background-color: #870e05}
+#body{background-color: #31026e}
+
+#name{
+
+	text
+}
+
+td{
+	border:1px solid white;
+	width:10%;
+}
+        </style>
+</head>
+<body id="body">
+
+<table>
+<tr>
+<td>
+<div id="button"></div>
+<div id="reduce"></div>
+<br>
+<div id="nums"> points  </div>
+<br>
+
+
+<input id="box"></input>
+
+
+</td>
+
+
+<td>
+<div id="botton"></div>
+<div id="redux"></div>
+<br>
+<div id="numb"> points</div>
+<br>
+<input id="box"></input>
+</td>
+
+<td>
+
+<div id="rob"> </div>
+<div id="red"></div>
+<br>
+<div id="freeze"> points</div>
+<br>
+<input id="box"></input>
+</td>
+
+<td>
+ <div id="bob"> </div>
+ <div id="debt"></div>
+ <br>
+ <div id="pop"> points</div>
+ <br>
+ <input id="box"></input>
+</td>
+
+
+<td>
+	<div id="beammeup"> </div>
+	<div id= "nope"> </div>
+	<br>
+	<div id="cost">points </div>
+	<br>
+	<input id="box"></input>
+</td>
+
+
+</table>
+
+<center>
+<iframe width="420" height="345" src="https://www.youtube.com/embed/4ic6bFOEdzs">
+</iframe>
+</center>
+<script type="text/javascript">
+
+
+
+
+
+
+
+
+
+
+	var counter = 0
+	button.addEventListener("click", function(){ 
+		counter=counter+1;
+		nums.innerText = counter;
+	})
+
+	reduce.addEventListener("click", function(){ 
+			counter=counter-1;
+			console.log(counter)
+			nums.innerText = counter;
+	})
+	
+
+
+
+	var count = 0
+	botton.addEventListener("click", function(){ 
+		count=count+1;
+
+		console.log(count)
+		numb.innerText = count;
+	})
+	redux.addEventListener("click", function(){ 
+			count=count-1;
+			console.log(counter)
+			numb.innerText = count;})
+
+	var cont = 0
+	rob.addEventListener("click", function(){ 
+		cont=cont+1;
+
+		console.log(cont)
+		freeze.innerText = cont;
+	})
+	red.addEventListener("click", function(){ 
+			cont=cont-1;
+			console.log(counter)
+			freeze.innerText = cont;})
+
+	var up = 0
+	bob.addEventListener("click", function(){ 
+		up=up+1;
+
+		console.log(up)
+		pop.innerText = up;
+	})
+	debt.addEventListener("click", function(){ 
+			up=up-1;
+			console.log(counter)
+			pop.innerText = up;})
+
+		var what = 0
+	beammeup.addEventListener("click", function(){ 
+		what=what+1;
+
+		console.log(up)
+		cost.innerText = what;
+	})
+	nope.addEventListener("click", function(){ 
+			what=what-1;
+			console.log(counter)
+			cost.innerText = what;})
+
+
+	</script>
+
+</body>
+</html>

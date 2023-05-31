@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+	export default class ScoreboardView {
+	constructor(root, playerOneName, playerTwoName, onControlButtonClick) {
+		this.root = root;
+		this.root.innerHTML = `
+			<div class="scoreboard">
+				<div class="scoreboard__name scoreboard__name--one">${playerOneName}</div>
+				<div class="scoreboard__name scoreboard__name--two">${playerTwoName}</div>
+				<div class="scoreboard__score" data-for-player="one">0</div>
+				<div class="scoreboard__score" data-for-player="two">0</div>
+				<div class="scoreboard__controls" data-for-player="one">
+					<button class="scoreboard__control-button">-</button>
+					<button class="scoreboard__control-button">+</button>
+				</div>
+				<div class="scoreboard__controls" data-for-player="two">
+					<button class="scoreboard__control-button">-</button>
+					<button class="scoreboard__control-button">+</button>
+				</div>
+			</div>
+		`;
+
+		this.root.querySelectorAll(".scoreboard__control-button").forEach(controlButton => {
+			controlButton.addEventListener("click", () => {
+				const direction = controlButton.textContent === "-" ? "minus" : "plus";
+				const player = controlButton.closest(".scoreboard__controls").dataset.forPlayer;
+
+				onControlButtonClick(player, direction);
+			});
+		});
+	}
+
+	update(playerOneScore, playerTwoScore) {
+		this.root.querySelector(".scoreboard__score[data-for-player='one']").textContent = playerOneScore;
+		this.root.querySelector(".scoreboard__score[data-for-player='two']").textContent = playerTwoScore;
+	}
+}
+<style type="text/css">
+	
+
+	.scoreboard {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	width: 300px;
+	font-family: 'Quicksand', sans-serif;
+}
+
+.scoreboard__name,
+.scoreboard__score {
+	padding: 10px;
+	text-align: center;
+}
+
+.scoreboard__name {
+	font-weight: bold;
+	border-bottom: 1px solid #ddd;
+}
+
+.scoreboard__name--one {
+	color: #009578;
+}
+
+.scoreboard__name--two {
+	color: #2d0095;
+}
+
+.scoreboard__score {
+	font-size: 2em;
+}
+
+.scoreboard__controls {
+	display: flex;
+}
+
+.scoreboard__control-button {
+	flex-grow: 1;
+	border: none;
+	background: #eee;
+	cursor: pointer;
+	font-size: 1.2em;
+}
+
+.scoreboard__control-button:hover {
+	background: #ddd;
+}
+
+.scoreboard__control-button:active {
+	background: #ccc;
+}
+
+</style>
+<script type="text/javascript">
+	import ScoreboardView from "./scoreboard/ScoreboardView.js";
+
+let playerOneScore = 0;
+let playerTwoScore = 0;
+const root = document.querySelector("#app");
+const view = new ScoreboardView(root, "Player One", "Player Two", (player, direction) => {
+	const difference = direction === "minus" ? -1 : 1;
+
+	if (player === "one") {
+		playerOneScore = Math.max(playerOneScore + difference, 0);
+	} else {
+		playerTwoScore = Math.max(playerTwoScore + difference, 0);
+	}
+
+	view.update(playerOneScore, playerTwoScore);
+</script>
+</body>
+</html>
